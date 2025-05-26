@@ -195,9 +195,7 @@ const About = () => {
               <img alt="Laura Martínez" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/11/1695409642703.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Israel G. Izquiano</h3>
               <p className="text-blue-600 font-semibold mb-3">Experto en procesos y automatización</p>
-              <p className="text-gray-600">
-                Experta en implementación de soluciones de IA en procesos empresariales.
-              </p>
+              <p className="text-gray-600">Se poner las cosas en su sitio, pero no se escribir bien una línea de código.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
