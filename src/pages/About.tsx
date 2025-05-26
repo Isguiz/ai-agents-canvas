@@ -182,7 +182,7 @@ const About = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b" alt="Ana Ruiz" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <img alt="Ana Ruiz" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1704188465548.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Marcos Rivera</h3>
               <p className="text-blue-600 font-semibold mb-3">Experto en desarrollo</p>
               <p className="text-gray-600">
