@@ -167,36 +167,28 @@ const About = () => {
               <img alt="Dr. María González" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1616666609862.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">David Merinas</h3>
               <p className="text-blue-600 font-semibold mb-3">Director tecnológico</p>
-              <p className="text-gray-600">
-                PhD en Machine Learning con 10+ años de experiencia en proyectos de IA empresarial.
-              </p>
+              <p className="text-gray-600">Físico de formación, programador por vocación y emprendedor por naturaleza.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
               <img alt="Carlos Mendoza" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1516263379978-2.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Alfredo Romeo</h3>
               <p className="text-blue-600 font-semibold mb-3">Artista de negocio</p>
-              <p className="text-gray-600">
-                Experto en integración de sistemas y deployment de modelos de ML en producción.
-              </p>
+              <p className="text-gray-600">Con más de 25 años de trayectoria en el mundo empresarial y tecnológico, mi pasión por la innovación y el emprendimiento en el ámbito local es el motor de mi carrera.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
               <img alt="Ana Ruiz" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1704188465548.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Marcos Rivera</h3>
               <p className="text-blue-600 font-semibold mb-3">Experto en desarrollo</p>
-              <p className="text-gray-600">
-                Especialista en análisis predictivo y visualización de datos complejos.
-              </p>
+              <p className="text-gray-600">Ya sea programando, participando en hackatones o trabajando en proyectos personales, siempre estoy explorando lo último en tecnología.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
               <img alt="Roberto Silva" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1692300587942.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Héctor romero</h3>
               <p className="text-blue-600 font-semibold mb-3">Director de proyectos</p>
-              <p className="text-gray-600">
-                Especialista en desarrollo de algoritmos y optimización de modelos de deep learning.
-              </p>
+              <p className="text-gray-600">Desarrollador de aplicaciones web y móviles. Experiencia en administración de sistemas. Monta-odoo.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
@@ -212,9 +204,7 @@ const About = () => {
               <img alt="Diego López" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/12/1730634059651.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Alejandro Picó</h3>
               <p className="text-blue-600 font-semibold mb-3">Experto en ciencia de datos</p>
-              <p className="text-gray-600">
-                Coordinador de proyectos con enfoque en metodologías ágiles y entrega de resultados.
-              </p>
+              <p className="text-gray-600">He adquirido habilidades invaluables en análisis de datos, aprendizaje automático, inteligencia artificial y análisis avanzado. Todo para prepararme para este mundo de hoy.</p>
             </div>
           </div>
         </div>
