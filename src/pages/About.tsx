@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,11 +31,7 @@ const About = () => {
               </p>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
-                alt="AI Technology"
-                className="rounded-lg shadow-xl w-full h-auto"
-              />
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e" alt="AI Technology" className="rounded-lg shadow-xl w-full h-auto" />
             </div>
           </div>
         </div>
@@ -171,102 +164,54 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-                alt="Dr. María González"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">
-                Dr. María González
-              </h3>
-              <p className="text-blue-600 font-semibold mb-3">
-                Directora de IA
-              </p>
+              <img alt="Dr. María González" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1616666609862.jpeg" />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">David Merinas</h3>
+              <p className="text-blue-600 font-semibold mb-3">Director tecnológico</p>
               <p className="text-gray-600">
                 PhD en Machine Learning con 10+ años de experiencia en proyectos de IA empresarial.
               </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-                alt="Carlos Mendoza"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">
-                Carlos Mendoza
-              </h3>
-              <p className="text-blue-600 font-semibold mb-3">
-                Arquitecto de Soluciones
-              </p>
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Carlos Mendoza" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Alfredo Romeo</h3>
+              <p className="text-blue-600 font-semibold mb-3">Artista de negocio</p>
               <p className="text-gray-600">
                 Experto en integración de sistemas y deployment de modelos de ML en producción.
               </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img
-                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
-                alt="Ana Ruiz"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">
-                Ana Ruiz
-              </h3>
-              <p className="text-blue-600 font-semibold mb-3">
-                Científica de Datos
-              </p>
+              <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b" alt="Ana Ruiz" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Marcos Rivera</h3>
+              <p className="text-blue-600 font-semibold mb-3">Experto en desarrollo</p>
               <p className="text-gray-600">
                 Especialista en análisis predictivo y visualización de datos complejos.
               </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
-                alt="Roberto Silva"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">
-                Roberto Silva
-              </h3>
-              <p className="text-blue-600 font-semibold mb-3">
-                Ingeniero de IA
-              </p>
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="Roberto Silva" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Héctor romero</h3>
+              <p className="text-blue-600 font-semibold mb-3">Director de proyectos</p>
               <p className="text-gray-600">
                 Especialista en desarrollo de algoritmos y optimización de modelos de deep learning.
               </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img
-                src="https://images.unsplash.com/photo-1494790108755-2616b612b8fe"
-                alt="Laura Martínez"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">
-                Laura Martínez
-              </h3>
-              <p className="text-blue-600 font-semibold mb-3">
-                Consultora en Transformación Digital
-              </p>
+              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b8fe" alt="Laura Martínez" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Israel G. Izquiano</h3>
+              <p className="text-blue-600 font-semibold mb-3">Experto en procesos y automatización</p>
               <p className="text-gray-600">
                 Experta en implementación de soluciones de IA en procesos empresariales.
               </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
-                alt="Diego López"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">
-                Diego López
-              </h3>
-              <p className="text-blue-600 font-semibold mb-3">
-                Gerente de Proyectos
-              </p>
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Diego López" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Alejandro Picó</h3>
+              <p className="text-blue-600 font-semibold mb-3">Experto en ciencia de datos</p>
               <p className="text-gray-600">
                 Coordinador de proyectos con enfoque en metodologías ágiles y entrega de resultados.
               </p>
@@ -274,8 +219,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
