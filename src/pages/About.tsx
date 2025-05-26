@@ -173,7 +173,7 @@ const About = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Carlos Mendoza" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <img alt="Carlos Mendoza" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1516263379978-2.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Alfredo Romeo</h3>
               <p className="text-blue-600 font-semibold mb-3">Artista de negocio</p>
               <p className="text-gray-600">
