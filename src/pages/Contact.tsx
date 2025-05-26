@@ -29,7 +29,7 @@ const Contact = () => {
     
     // Simulate form submission
     toast({
-      title: "Mensaje Enviado",
+      title: "Mensaje enviado",
       description: "Gracias por contactarnos. Te responderemos pronto.",
     });
     
@@ -53,7 +53,7 @@ const Contact = () => {
       icon: <Phone size={24} />,
       title: "Teléfono",
       info: "+1 (555) 123-4567",
-      description: "Lunes a Viernes, 9:00 - 18:00"
+      description: "Lunes a viernes, 9:00 - 18:00"
     },
     {
       icon: <MapPin size={24} />,
@@ -66,13 +66,14 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 animate-pulse opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Contactanos
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in transform transition-all duration-1000 hover:scale-105">
+              Contáctanos
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto animate-slide-up opacity-0 animation-delay-300">
               ¿Listo para transformar tu negocio con IA? Hablemos sobre tu proyecto.
             </p>
           </div>
@@ -84,10 +85,10 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="border-0 shadow-xl">
+            <Card className="border-0 shadow-xl animate-fade-in opacity-0 animation-delay-200 transform transition-all duration-500 hover:shadow-2xl">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-blue-900">
-                  Envíanos un Mensaje
+                  Envíanos un mensaje
                 </CardTitle>
                 <CardDescription className="text-lg">
                   Completa el formulario y nos pondremos en contacto contigo pronto.
@@ -96,8 +97,8 @@ const Contact = () => {
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Nombre Completo</Label>
+                    <div className="space-y-2 transform transition-all duration-300 hover:translate-x-1">
+                      <Label htmlFor="name">Nombre completo</Label>
                       <Input
                         id="name"
                         name="name"
@@ -105,10 +106,10 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="border-gray-300 focus:border-blue-500"
+                        className="border-gray-300 focus:border-blue-500 transition-all duration-300"
                       />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-2 transform transition-all duration-300 hover:translate-x-1">
                       <Label htmlFor="email">Email</Label>
                       <Input
                         id="email"
@@ -117,12 +118,12 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="border-gray-300 focus:border-blue-500"
+                        className="border-gray-300 focus:border-blue-500 transition-all duration-300"
                       />
                     </div>
                   </div>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 transform transition-all duration-300 hover:translate-x-1">
                     <Label htmlFor="subject">Asunto</Label>
                     <Input
                       id="subject"
@@ -131,11 +132,11 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="border-gray-300 focus:border-blue-500"
+                      className="border-gray-300 focus:border-blue-500 transition-all duration-300"
                     />
                   </div>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 transform transition-all duration-300 hover:translate-x-1">
                     <Label htmlFor="message">Mensaje</Label>
                     <textarea
                       id="message"
@@ -144,24 +145,24 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none transition-all duration-300"
                       placeholder="Cuéntanos sobre tu proyecto y cómo podemos ayudarte..."
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                    <Send className="w-4 h-4 mr-2" />
-                    Enviar Mensaje
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <Send className="w-4 h-4 mr-2 animate-pulse" />
+                    Enviar mensaje
                   </Button>
                 </form>
               </CardContent>
             </Card>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 animate-slide-up opacity-0 animation-delay-400">
               <div>
                 <h2 className="text-3xl font-bold text-blue-900 mb-6">
-                  Información de Contacto
+                  Información de contacto
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
                   Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de estos canales.
@@ -170,10 +171,17 @@ const Contact = () => {
 
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
-                  <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Card 
+                    key={index} 
+                    className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in opacity-0"
+                    style={{
+                      animationDelay: `${600 + index * 100}ms`,
+                      animationFillMode: 'forwards'
+                    }}
+                  >
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="p-3 bg-blue-100 rounded-full text-blue-600">
+                        <div className="p-3 bg-blue-100 rounded-full text-blue-600 animate-bounce" style={{ animationDelay: `${index * 200}ms` }}>
                           {item.icon}
                         </div>
                         <div>
@@ -194,19 +202,19 @@ const Contact = () => {
               </div>
 
               {/* FAQ Section */}
-              <Card className="border-0 shadow-lg bg-blue-50">
+              <Card className="border-0 shadow-lg bg-blue-50 animate-fade-in opacity-0 animation-delay-900 transform transition-all duration-500 hover:scale-105">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-blue-900 mb-4">
-                    ¿Tienes Preguntas Frecuentes?
+                    ¿Tienes preguntas frecuentes?
                   </h3>
                   <ul className="space-y-3 text-gray-700">
-                    <li>• ¿Cuánto tiempo toma implementar una solución de IA?</li>
-                    <li>• ¿Qué datos necesito para empezar un proyecto?</li>
-                    <li>• ¿Ofrecen soporte post-implementación?</li>
-                    <li>• ¿Cómo garantizan la seguridad de los datos?</li>
+                    <li className="transform transition-all duration-300 hover:translate-x-2">• ¿Cuánto tiempo toma implementar una solución de IA?</li>
+                    <li className="transform transition-all duration-300 hover:translate-x-2">• ¿Qué datos necesito para empezar un proyecto?</li>
+                    <li className="transform transition-all duration-300 hover:translate-x-2">• ¿Ofrecen soporte post-implementación?</li>
+                    <li className="transform transition-all duration-300 hover:translate-x-2">• ¿Cómo garantizan la seguridad de los datos?</li>
                   </ul>
                   <p className="mt-4 text-blue-600 font-medium">
-                    Contactanos para obtener respuestas detalladas a estas y otras preguntas.
+                    Contáctanos para obtener respuestas detalladas a estas y otras preguntas.
                   </p>
                 </CardContent>
               </Card>

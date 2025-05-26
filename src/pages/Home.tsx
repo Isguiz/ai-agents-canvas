@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { Brain, Zap, Target, BarChart3, Cpu, Users, CheckCircle } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+
 const Home = () => {
   const services = [{
     icon: <Brain size={32} />,
@@ -12,25 +14,25 @@ const Home = () => {
     link: "/servicios"
   }, {
     icon: <Zap size={32} />,
-    title: "Automatización de Procesos",
+    title: "Automatización de procesos",
     description: "Optimiza tus operaciones con soluciones de automatización inteligente.",
     keyPoints: ["Reducción de costos operativos", "Mejora en la eficiencia", "Integración sin interrupciones"],
     link: "/servicios"
   }, {
     icon: <Target size={32} />,
-    title: "Machine Learning Personalizado",
+    title: "Machine learning personalizado",
     description: "Modelos de ML adaptados específicamente a tus datos y objetivos.",
     keyPoints: ["Algoritmos a medida", "Entrenamiento con tus datos", "Métricas de rendimiento claras"],
     link: "/servicios"
   }, {
     icon: <BarChart3 size={32} />,
-    title: "Análisis Predictivo",
+    title: "Análisis predictivo",
     description: "Anticipa tendencias y toma decisiones basadas en datos inteligentes.",
     keyPoints: ["Predicciones precisas", "Dashboards interactivos", "Alertas automáticas"],
     link: "/servicios"
   }, {
     icon: <Cpu size={32} />,
-    title: "Desarrollo de Chatbots",
+    title: "Desarrollo de chatbots",
     description: "Asistentes virtuales inteligentes para mejorar la experiencia del cliente.",
     keyPoints: ["Disponibilidad 24/7", "Integración multicanal", "Aprendizaje continuo"],
     link: "/servicios"
@@ -41,27 +43,29 @@ const Home = () => {
     keyPoints: ["Programas personalizados", "Instructores expertos", "Certificaciones reconocidas"],
     link: "/servicios"
   }];
-  return <div className="min-h-screen">
+
+  return (
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Transformamos tu Negocio con
-              <span className="text-blue-300 block mt-2">Inteligencia Artificial</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 transform transition-all duration-1000 hover:scale-105">
+              Transformamos tu negocio con
+              <span className="text-blue-300 block mt-2 animate-pulse">inteligencia artificial</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto animate-slide-up opacity-0 animation-delay-300">
               Somos expertos en IA que ayudamos a las empresas a aprovechar el poder de la inteligencia artificial para optimizar procesos, aumentar la eficiencia y generar ventajas competitivas.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up opacity-0 animation-delay-600">
               <Link to="/servicios">
-                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-lg px-8 py-3">
-                  Explora Nuestros Servicios
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-lg px-8 py-3 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  Explora nuestros servicios
                 </Button>
               </Link>
               <Link to="/contacto">
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3 bg-transparent">
-                  Contactanos
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3 bg-transparent transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  Contáctanos
                 </Button>
               </Link>
             </div>
@@ -73,20 +77,27 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              Nuestros Servicios
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4 animate-fade-in">
+              Nuestros servicios
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up opacity-0 animation-delay-200">
               Ofrecemos soluciones completas de inteligencia artificial adaptadas a las necesidades específicas de tu empresa.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => <div key={index} className="animate-fade-in" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
+            {services.map((service, index) => (
+              <div 
+                key={index} 
+                className="animate-fade-in opacity-0 transform translate-y-4 transition-all duration-500 hover:translate-y-0" 
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                  animationFillMode: 'forwards'
+                }}
+              >
                 <ServiceCard {...service} />
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -95,46 +106,46 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-blue-600 font-semibold text-lg mb-2">SOBRE NOSOTROS</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Expertos en Inteligencia Artificial con un enfoque en resultados tangibles
+            <p className="text-blue-600 font-semibold text-lg mb-2 animate-fade-in">SOBRE NOSOTROS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-slide-up opacity-0 animation-delay-200">
+              Expertos en inteligencia artificial con un enfoque en resultados tangibles
             </h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-slide-up opacity-0 animation-delay-400">
               <p className="text-lg text-gray-700 mb-8">
                 En Agentes de IA, combinamos experiencia técnica avanzada con un profundo conocimiento de negocio para ofrecer soluciones de IA que generan valor real. Nuestro equipo está formado por especialistas apasionados por la tecnología y comprometidos con la excelencia.
               </p>
               
               <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-left">
+                <div className="text-left transform transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-2">
-                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2" />
+                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2 animate-pulse" />
                     <span className="font-semibold text-gray-900">Expertise técnico</span>
                   </div>
                   <p className="text-gray-600 text-sm">PhD y masters en IA y ML</p>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left transform transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-2">
-                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2" />
+                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2 animate-pulse animation-delay-100" />
                     <span className="font-semibold text-gray-900">Enfoque estratégico</span>
                   </div>
                   <p className="text-gray-600 text-sm">Alineados con tus objetivos</p>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left transform transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-2">
-                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2" />
+                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2 animate-pulse animation-delay-200" />
                     <span className="font-semibold text-gray-900">Innovación continua</span>
                   </div>
                   <p className="text-gray-600 text-sm">Siempre a la vanguardia</p>
                 </div>
                 
-                <div className="text-left">
+                <div className="text-left transform transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-2">
-                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2" />
+                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2 animate-pulse animation-delay-300" />
                     <span className="font-semibold text-gray-900">Escalabilidad</span>
                   </div>
                   <p className="text-gray-600 text-sm">Crecemos con tu negocio</p>
@@ -142,20 +153,20 @@ const Home = () => {
               </div>
               
               <Link to="/nosotros">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   Conoce al equipo
                 </Button>
               </Link>
             </div>
             
-            <div className="grid grid-cols-2 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">57+</div>
+            <div className="grid grid-cols-2 gap-8 animate-fade-in opacity-0 animation-delay-600">
+              <div className="text-center transform transition-all duration-300 hover:scale-110 hover:bg-blue-50 p-4 rounded-lg">
+                <div className="text-4xl font-bold text-blue-600 mb-2 counter">57+</div>
                 <p className="text-gray-600">Proyectos completados</p>
               </div>
               
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">21+</div>
+              <div className="text-center transform transition-all duration-300 hover:scale-110 hover:bg-blue-50 p-4 rounded-lg">
+                <div className="text-4xl font-bold text-blue-600 mb-2 counter">21+</div>
                 <p className="text-gray-600">Clientes satisfechos</p>
               </div>
             </div>
@@ -164,21 +175,24 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            ¿Listo para Transformar tu Negocio?
+      <section className="bg-blue-600 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 animate-pulse opacity-50"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
+            ¿Listo para transformar tu negocio?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Contactanos hoy mismo y descubre cómo la inteligencia artificial puede revolucionar tu empresa.
+          <p className="text-xl mb-8 text-blue-100 animate-slide-up opacity-0 animation-delay-200">
+            Contáctanos hoy mismo y descubre cómo la inteligencia artificial puede revolucionar tu empresa.
           </p>
           <Link to="/contacto">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
-              Comienza Ahora
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3 transform transition-all duration-300 hover:scale-105 hover:shadow-xl animate-bounce opacity-0 animation-delay-400">
+              Comienza ahora
             </Button>
           </Link>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;

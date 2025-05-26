@@ -90,13 +90,14 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 animate-pulse opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in transform transition-all duration-1000 hover:scale-105">
               Nuestros servicios de IA
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto animate-slide-up opacity-0 animation-delay-300">
               Soluciones completas de inteligencia artificial diseñadas para transformar tu negocio y generar resultados medibles.
             </p>
           </div>
@@ -108,11 +109,18 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {detailedServices.map((service, index) => (
-              <Card key={index} className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <Card 
+                key={index} 
+                className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in opacity-0"
+                style={{
+                  animationDelay: `${index * 0.2}s`,
+                  animationFillMode: 'forwards'
+                }}
+              >
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  <CardHeader className={`${index % 2 === 0 ? 'bg-gradient-to-br from-blue-50 to-white' : 'bg-gradient-to-br from-green-50 to-white'} p-8 lg:p-12 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <CardHeader className={`${index % 2 === 0 ? 'bg-gradient-to-br from-blue-50 to-white' : 'bg-gradient-to-br from-green-50 to-white'} p-8 lg:p-12 ${index % 2 === 1 ? 'lg:col-start-2' : ''} transform transition-all duration-300 hover:scale-105`}>
                     <div className="flex items-center space-x-4 mb-6">
-                      <div className={`p-3 ${index % 2 === 0 ? 'bg-blue-100 text-blue-600' : 'bg-green-100 text-green-600'} rounded-full`}>
+                      <div className={`p-3 ${index % 2 === 0 ? 'bg-blue-100 text-blue-600' : 'bg-green-100 text-green-600'} rounded-full animate-bounce`}>
                         {service.icon}
                       </div>
                       <CardTitle className={`text-2xl font-bold ${index % 2 === 0 ? 'text-blue-900' : 'text-green-900'}`}>
@@ -122,14 +130,14 @@ const Services = () => {
                     <CardDescription className="text-lg text-gray-700 mb-6">
                       {service.description}
                     </CardDescription>
-                    <div className={`${index % 2 === 0 ? 'bg-blue-100' : 'bg-green-100'} p-4 rounded-lg mb-6`}>
+                    <div className={`${index % 2 === 0 ? 'bg-blue-100' : 'bg-green-100'} p-4 rounded-lg mb-6 transform transition-all duration-300 hover:scale-105`}>
                       <p className={`${index % 2 === 0 ? 'text-blue-800' : 'text-green-800'} font-semibold`}>
-                        <CheckCircle className="inline w-5 h-5 mr-2" />
+                        <CheckCircle className="inline w-5 h-5 mr-2 animate-pulse" />
                         {service.benefits}
                       </p>
                     </div>
                     <Link to="/contacto">
-                      <Button className={`${index % 2 === 0 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-green-600 hover:bg-green-700'} text-white`}>
+                      <Button className={`${index % 2 === 0 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-green-600 hover:bg-green-700'} text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg`}>
                         Solicitar información
                       </Button>
                     </Link>
@@ -140,8 +148,13 @@ const Services = () => {
                     </h4>
                     <ul className="space-y-4">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-3">
-                          <CheckCircle className={`${index % 2 === 0 ? 'text-blue-500' : 'text-green-500'} w-5 h-5 mt-1 flex-shrink-0`} />
+                        <li 
+                          key={featureIndex} 
+                          className="flex items-start space-x-3 transform transition-all duration-300 hover:translate-x-2"
+                        >
+                          <CheckCircle className={`${index % 2 === 0 ? 'text-blue-500' : 'text-green-500'} w-5 h-5 mt-1 flex-shrink-0 animate-pulse`} 
+                            style={{ animationDelay: `${featureIndex * 0.1}s` }}
+                          />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -155,21 +168,22 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="bg-blue-600 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 animate-pulse opacity-50"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
             ¿Quieres saber más sobre nuestros servicios?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-blue-100 animate-slide-up opacity-0 animation-delay-200">
             Agenda una consulta gratuita y descubre cómo podemos ayudarte a implementar IA en tu empresa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contacto">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
-                Contactanos ahora
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3 transform transition-all duration-300 hover:scale-105 hover:shadow-xl animate-bounce opacity-0 animation-delay-400">
+                Contáctanos ahora
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3 bg-transparent">
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3 bg-transparent transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
               Descargar brochure
             </Button>
           </div>
