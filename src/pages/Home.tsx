@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Brain, Zap, Target, BarChart3, Cpu, Users } from 'lucide-react';
+import { Brain, Zap, Target, BarChart3, Cpu, Users, CheckCircle } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -95,7 +95,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/contacto">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3 bg-transparent">
                   Contactanos
                 </Button>
               </Link>
@@ -122,6 +122,78 @@ const Home = () => {
                 <ServiceCard {...service} />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-blue-600 font-semibold text-lg mb-2">SOBRE NOSOTROS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Expertos en Inteligencia Artificial con un enfoque en resultados tangibles
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg text-gray-700 mb-8">
+                En Agentes de IA, combinamos experiencia técnica avanzada con un profundo conocimiento de negocio para ofrecer soluciones de IA que generan valor real. Nuestro equipo está formado por especialistas apasionados por la tecnología y comprometidos con la excelencia.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="text-left">
+                  <div className="flex items-center mb-2">
+                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2" />
+                    <span className="font-semibold text-gray-900">Expertise técnico</span>
+                  </div>
+                  <p className="text-gray-600 text-sm">PhD y masters en IA y ML</p>
+                </div>
+                
+                <div className="text-left">
+                  <div className="flex items-center mb-2">
+                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2" />
+                    <span className="font-semibold text-gray-900">Enfoque estratégico</span>
+                  </div>
+                  <p className="text-gray-600 text-sm">Alineados con tus objetivos</p>
+                </div>
+                
+                <div className="text-left">
+                  <div className="flex items-center mb-2">
+                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2" />
+                    <span className="font-semibold text-gray-900">Innovación continua</span>
+                  </div>
+                  <p className="text-gray-600 text-sm">Siempre a la vanguardia</p>
+                </div>
+                
+                <div className="text-left">
+                  <div className="flex items-center mb-2">
+                    <CheckCircle className="text-blue-600 w-5 h-5 mr-2" />
+                    <span className="font-semibold text-gray-900">Escalabilidad</span>
+                  </div>
+                  <p className="text-gray-600 text-sm">Crecemos con tu negocio</p>
+                </div>
+              </div>
+              
+              <Link to="/nosotros">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3">
+                  Conoce al equipo
+                </Button>
+              </Link>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">30+</div>
+                <p className="text-gray-600">Expertos en IA</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+                <p className="text-gray-600">Clientes satisfechos</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
