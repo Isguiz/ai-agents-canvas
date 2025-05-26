@@ -115,25 +115,19 @@ const About = () => {
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
-                50+
-              </div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">57+</div>
               <div className="text-lg text-blue-100">
                 Proyectos Completados
               </div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
-                25+
-              </div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">21+</div>
               <div className="text-lg text-blue-100">
                 Clientes Satisfechos
               </div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
-                95%
-              </div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">100%</div>
               <div className="text-lg text-blue-100">
                 Tasa de Éxito
               </div>
