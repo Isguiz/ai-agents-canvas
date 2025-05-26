@@ -1,39 +1,7 @@
 
 import React from 'react';
-import { Award, Users, Target, Lightbulb } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const About = () => {
-  const values = [
-    {
-      icon: <Lightbulb size={32} />,
-      title: "Innovación",
-      description: "Buscamos constantemente nuevas formas de aplicar la IA para resolver problemas complejos."
-    },
-    {
-      icon: <Users size={32} />,
-      title: "Colaboración",
-      description: "Trabajamos estrechamente con nuestros clientes como socios estratégicos."
-    },
-    {
-      icon: <Target size={32} />,
-      title: "Resultados",
-      description: "Nos enfocamos en entregar soluciones que generen valor medible y sostenible."
-    },
-    {
-      icon: <Award size={32} />,
-      title: "Excelencia",
-      description: "Mantenemos los más altos estándares en cada proyecto que emprendemos."
-    }
-  ];
-
-  const stats = [
-    { number: "50+", label: "Proyectos Completados" },
-    { number: "25+", label: "Clientes Satisfechos" },
-    { number: "95%", label: "Tasa de Éxito" },
-    { number: "5 años", label: "de Experiencia" }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -89,23 +57,53 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center text-blue-600">
-                    {value.icon}
-                  </div>
-                  <CardTitle className="text-xl font-bold text-blue-900">
-                    {value.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 text-base">
-                    {value.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="text-center bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="mx-auto mb-4 p-4 bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center">
+                <span className="text-blue-600 text-2xl">💡</span>
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 mb-3">
+                Innovación
+              </h3>
+              <p className="text-gray-600 text-base">
+                Buscamos constantemente nuevas formas de aplicar la IA para resolver problemas complejos.
+              </p>
+            </div>
+
+            <div className="text-center bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="mx-auto mb-4 p-4 bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center">
+                <span className="text-blue-600 text-2xl">👥</span>
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 mb-3">
+                Colaboración
+              </h3>
+              <p className="text-gray-600 text-base">
+                Trabajamos estrechamente con nuestros clientes como socios estratégicos.
+              </p>
+            </div>
+
+            <div className="text-center bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="mx-auto mb-4 p-4 bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center">
+                <span className="text-blue-600 text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 mb-3">
+                Resultados
+              </h3>
+              <p className="text-gray-600 text-base">
+                Nos enfocamos en entregar soluciones que generen valor medible y sostenible.
+              </p>
+            </div>
+
+            <div className="text-center bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="mx-auto mb-4 p-4 bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center">
+                <span className="text-blue-600 text-2xl">🏆</span>
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 mb-3">
+                Excelencia
+              </h3>
+              <p className="text-gray-600 text-base">
+                Mantenemos los más altos estándares en cada proyecto que emprendemos.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -123,16 +121,38 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-lg text-blue-100">
-                  {stat.label}
-                </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
+                50+
               </div>
-            ))}
+              <div className="text-lg text-blue-100">
+                Proyectos Completados
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
+                25+
+              </div>
+              <div className="text-lg text-blue-100">
+                Clientes Satisfechos
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
+                95%
+              </div>
+              <div className="text-lg text-blue-100">
+                Tasa de Éxito
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
+                5 años
+              </div>
+              <div className="text-lg text-blue-100">
+                de Experiencia
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -149,46 +169,108 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Dr. María González",
-                role: "Directora de IA",
-                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-                description: "PhD en Machine Learning con 10+ años de experiencia en proyectos de IA empresarial."
-              },
-              {
-                name: "Carlos Mendoza",
-                role: "Arquitecto de Soluciones",
-                image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-                description: "Experto en integración de sistemas y deployment de modelos de ML en producción."
-              },
-              {
-                name: "Ana Ruiz",
-                role: "Científica de Datos",
-                image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
-                description: "Especialista en análisis predictivo y visualización de datos complejos."
-              }
-            ].map((member, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-blue-600 font-semibold mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-600">
-                    {member.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                alt="Dr. María González"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
+                Dr. María González
+              </h3>
+              <p className="text-blue-600 font-semibold mb-3">
+                Directora de IA
+              </p>
+              <p className="text-gray-600">
+                PhD en Machine Learning con 10+ años de experiencia en proyectos de IA empresarial.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+                alt="Carlos Mendoza"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
+                Carlos Mendoza
+              </h3>
+              <p className="text-blue-600 font-semibold mb-3">
+                Arquitecto de Soluciones
+              </p>
+              <p className="text-gray-600">
+                Experto en integración de sistemas y deployment de modelos de ML en producción.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
+                alt="Ana Ruiz"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
+                Ana Ruiz
+              </h3>
+              <p className="text-blue-600 font-semibold mb-3">
+                Científica de Datos
+              </p>
+              <p className="text-gray-600">
+                Especialista en análisis predictivo y visualización de datos complejos.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+                alt="Roberto Silva"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
+                Roberto Silva
+              </h3>
+              <p className="text-blue-600 font-semibold mb-3">
+                Ingeniero de IA
+              </p>
+              <p className="text-gray-600">
+                Especialista en desarrollo de algoritmos y optimización de modelos de deep learning.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1494790108755-2616b612b8fe"
+                alt="Laura Martínez"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
+                Laura Martínez
+              </h3>
+              <p className="text-blue-600 font-semibold mb-3">
+                Consultora en Transformación Digital
+              </p>
+              <p className="text-gray-600">
+                Experta en implementación de soluciones de IA en procesos empresariales.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                alt="Diego López"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">
+                Diego López
+              </h3>
+              <p className="text-blue-600 font-semibold mb-3">
+                Gerente de Proyectos
+              </p>
+              <p className="text-gray-600">
+                Coordinador de proyectos con enfoque en metodologías ágiles y entrega de resultados.
+              </p>
+            </div>
           </div>
         </div>
       </section>
