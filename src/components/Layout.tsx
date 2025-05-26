@@ -1,26 +1,31 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({
+  children
+}: {
+  children: React.ReactNode;
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
-  const navItems = [
-    { path: '/', label: 'Inicio' },
-    { path: '/servicios', label: 'Servicios' },
-    { path: '/nosotros', label: 'Nosotros' },
-    { path: '/contacto', label: 'Contacto' },
-  ];
-
+  const navItems = [{
+    path: '/',
+    label: 'Inicio'
+  }, {
+    path: '/servicios',
+    label: 'Servicios'
+  }, {
+    path: '/nosotros',
+    label: 'Nosotros'
+  }, {
+    path: '/contacto',
+    label: 'Contacto'
+  }];
   const isActiveRoute = (path: string) => {
     return location.pathname === path;
   };
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,53 +38,27 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`text-lg font-medium transition-colors duration-300 ${
-                    isActiveRoute(item.path)
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
-                  }`}
-                >
+              {navItems.map(item => <Link key={item.path} to={item.path} className={`text-lg font-medium transition-colors duration-300 ${isActiveRoute(item.path) ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700 hover:text-blue-600'}`}>
                   {item.label}
-                </Link>
-              ))}
+                </Link>)}
             </nav>
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-700 hover:text-blue-600 transition-colors">
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden pb-6">
+          {isMenuOpen && <div className="md:hidden pb-6">
               <nav className="flex flex-col space-y-4">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`text-lg font-medium transition-colors duration-300 ${
-                      isActiveRoute(item.path)
-                        ? 'text-blue-600'
-                        : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
+                {navItems.map(item => <Link key={item.path} to={item.path} onClick={() => setIsMenuOpen(false)} className={`text-lg font-medium transition-colors duration-300 ${isActiveRoute(item.path) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}>
                     {item.label}
-                  </Link>
-                ))}
+                  </Link>)}
               </nav>
-            </div>
-          )}
+            </div>}
         </div>
       </header>
 
@@ -101,16 +80,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
               <ul className="space-y-2">
-                {navItems.map((item) => (
-                  <li key={item.path}>
-                    <Link
-                      to={item.path}
-                      className="text-blue-200 hover:text-white transition-colors"
-                    >
+                {navItems.map(item => <li key={item.path}>
+                    <Link to={item.path} className="text-blue-200 hover:text-white transition-colors">
                       {item.label}
                     </Link>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
             <div>
@@ -122,14 +96,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
           <div className="border-t border-blue-800 mt-8 pt-8 text-center">
-            <p className="text-blue-200">
-              © 2024 Agentes de IA. Todos los derechos reservados.
-            </p>
+            <p className="text-blue-200">© 2025 Agentes de IA. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Layout;
