@@ -29,7 +29,7 @@ const Contact = () => {
     
     // Simulate form submission
     toast({
-      title: "Mensaje Enviado",
+      title: "Mensaje enviado",
       description: "Gracias por contactarnos. Te responderemos pronto.",
     });
     
@@ -53,7 +53,7 @@ const Contact = () => {
       icon: <Phone size={24} />,
       title: "Teléfono",
       info: "+1 (555) 123-4567",
-      description: "Lunes a Viernes, 9:00 - 18:00"
+      description: "Lunes a viernes, 9:00 - 18:00"
     },
     {
       icon: <MapPin size={24} />,
@@ -70,7 +70,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Contactanos
+              Contáctanos
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
               ¿Listo para transformar tu negocio con IA? Hablemos sobre tu proyecto.
@@ -87,7 +87,7 @@ const Contact = () => {
             <Card className="border-0 shadow-xl">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-blue-900">
-                  Envíanos un Mensaje
+                  Envíanos un mensaje
                 </CardTitle>
                 <CardDescription className="text-lg">
                   Completa el formulario y nos pondremos en contacto contigo pronto.
@@ -97,7 +97,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Nombre Completo</Label>
+                      <Label htmlFor="name">Nombre completo</Label>
                       <Input
                         id="name"
                         name="name"
@@ -151,7 +151,7 @@ const Contact = () => {
                   
                   <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     <Send className="w-4 h-4 mr-2" />
-                    Enviar Mensaje
+                    Enviar mensaje
                   </Button>
                 </form>
               </CardContent>
@@ -161,7 +161,7 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-blue-900 mb-6">
-                  Información de Contacto
+                  Información de contacto
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
                   Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de estos canales.
@@ -197,7 +197,7 @@ const Contact = () => {
               <Card className="border-0 shadow-lg bg-blue-50">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-blue-900 mb-4">
-                    ¿Tienes Preguntas Frecuentes?
+                    ¿Tienes preguntas frecuentes?
                   </h3>
                   <ul className="space-y-3 text-gray-700">
                     <li>• ¿Cuánto tiempo toma implementar una solución de IA?</li>
@@ -206,7 +206,7 @@ const Contact = () => {
                     <li>• ¿Cómo garantizan la seguridad de los datos?</li>
                   </ul>
                   <p className="mt-4 text-blue-600 font-medium">
-                    Contactanos para obtener respuestas detalladas a estas y otras preguntas.
+                    Contáctanos para obtener respuestas detalladas a estas y otras preguntas.
                   </p>
                 </CardContent>
               </Card>

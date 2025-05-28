@@ -1,6 +1,9 @@
+
 import React from 'react';
+
 const About = () => {
-  return <div className="min-h-screen bg-gray-50">
+  return (
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +24,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
-                Nuestra Misión
+                Nuestra misión
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 Democratizar el acceso a la inteligencia artificial, ayudando a empresas de todos los tamaños a aprovechar el poder de la IA para innovar, optimizar y crecer de manera sostenible.
@@ -42,7 +45,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              Nuestros Valores
+              Nuestros valores
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Los principios que guían nuestro trabajo y definen nuestra cultura empresarial.
@@ -106,7 +109,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Nuestros Logros
+              Nuestros logros
             </h2>
             <p className="text-xl text-blue-100">
               Números que reflejan nuestro compromiso con la excelencia.
@@ -117,19 +120,19 @@ const About = () => {
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">57+</div>
               <div className="text-lg text-blue-100">
-                Proyectos Completados
+                Proyectos completados
               </div>
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">21+</div>
               <div className="text-lg text-blue-100">
-                Clientes Satisfechos
+                Clientes satisfechos
               </div>
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">100%</div>
               <div className="text-lg text-blue-100">
-                Tasa de Éxito
+                Tasa de éxito
               </div>
             </div>
             <div className="text-center">
@@ -137,7 +140,7 @@ const About = () => {
                 5 años
               </div>
               <div className="text-lg text-blue-100">
-                de Experiencia
+                de experiencia
               </div>
             </div>
           </div>
@@ -149,7 +152,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              Nuestro Equipo
+              Nuestro equipo
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Un grupo diverso de expertos en IA, datos y tecnología, unidos por la pasión de transformar negocios.
@@ -158,42 +161,42 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img alt="Dr. María González" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1616666609862.jpeg" />
+              <img alt="David Merinas" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1616666609862.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">David Merinas</h3>
               <p className="text-blue-600 font-semibold mb-3">Director tecnológico</p>
               <p className="text-gray-600">Físico de formación, programador por vocación y emprendedor por naturaleza.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img alt="Carlos Mendoza" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1516263379978-2.jpeg" />
+              <img alt="Alfredo Romeo" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1516263379978-2.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Alfredo Romeo</h3>
               <p className="text-blue-600 font-semibold mb-3">Artista de negocio</p>
               <p className="text-gray-600">Con más de 25 años de trayectoria en el mundo empresarial y tecnológico, mi pasión por la innovación y el emprendimiento en el ámbito local es el motor de mi carrera.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img alt="Ana Ruiz" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1704188465548.jpeg" />
+              <img alt="Marcos Rivera" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1704188465548.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Marcos Rivera</h3>
               <p className="text-blue-600 font-semibold mb-3">Experto en desarrollo</p>
               <p className="text-gray-600">Ya sea programando, participando en hackatones o trabajando en proyectos personales, siempre estoy explorando lo último en tecnología.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img alt="Roberto Silva" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1692300587942.jpeg" />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">Héctor romero</h3>
+              <img alt="Héctor Romero" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/02/1692300587942.jpeg" />
+              <h3 className="text-xl font-bold text-blue-900 mb-2">Héctor Romero</h3>
               <p className="text-blue-600 font-semibold mb-3">Director de proyectos</p>
               <p className="text-gray-600">Desarrollador de aplicaciones web y móviles. Experiencia en administración de sistemas. Monta-odoo.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img alt="Laura Martínez" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/11/1695409642703.jpeg" />
+              <img alt="Israel G. Izquiano" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/11/1695409642703.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Israel G. Izquiano</h3>
               <p className="text-blue-600 font-semibold mb-3">Experto en procesos y automatización</p>
               <p className="text-gray-600">Se poner las cosas en su sitio, pero no se escribir bien una línea de código.</p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
-              <img alt="Diego López" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/12/1730634059651.jpeg" />
+              <img alt="Alejandro Picó" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" src="https://www.agentesdeia.com/wp-content/uploads/2024/12/1730634059651.jpeg" />
               <h3 className="text-xl font-bold text-blue-900 mb-2">Alejandro Picó</h3>
               <p className="text-blue-600 font-semibold mb-3">Experto en ciencia de datos</p>
               <p className="text-gray-600">He adquirido habilidades invaluables en análisis de datos, aprendizaje automático, inteligencia artificial y análisis avanzado. Todo para prepararme para este mundo de hoy.</p>
@@ -201,6 +204,8 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default About;

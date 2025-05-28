@@ -38,7 +38,7 @@ const ServiceCard = ({ icon, title, description, keyPoints, link }: ServiceCardP
         </ul>
         <Link to={link} className="block">
           <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-300">
-            Más Información
+            Más información
           </Button>
         </Link>
       </CardContent>
