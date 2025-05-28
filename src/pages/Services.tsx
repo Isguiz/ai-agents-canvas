@@ -18,7 +18,9 @@ const Services = () => {
         "Análisis de ROI y métricas de éxito",
         "Gestión del cambio organizacional"
       ],
-      benefits: "Hasta 40% de reducción en costos operativos y 60% de mejora en eficiencia."
+      benefits: "Hasta 40% de reducción en costos operativos y 60% de mejora en eficiencia.",
+      ctaText: "Planificar mi estrategia de IA",
+      link: "/servicios/consultoria-estrategica"
     },
     {
       icon: <Zap size={48} />,
@@ -31,7 +33,9 @@ const Services = () => {
         "Monitoreo y optimización continua",
         "Escalamiento gradual"
       ],
-      benefits: "Reducción del 70% en tiempo de procesamiento y eliminación de errores manuales."
+      benefits: "Reducción del 70% en tiempo de procesamiento y eliminación de errores manuales.",
+      ctaText: "Automatizar mis procesos",
+      link: "/servicios/automatizacion-procesos"
     },
     {
       icon: <Target size={48} />,
@@ -44,7 +48,9 @@ const Services = () => {
         "Deployment en producción",
         "Monitoreo de rendimiento continuo"
       ],
-      benefits: "Modelos con 95%+ de precisión adaptados a tus datos específicos."
+      benefits: "Modelos con 95%+ de precisión adaptados a tus datos específicos.",
+      ctaText: "Crear mi modelo personalizado",
+      link: "/servicios/machine-learning"
     },
     {
       icon: <BarChart3 size={48} />,
@@ -57,7 +63,9 @@ const Services = () => {
         "Optimización de inventarios",
         "Dashboards interactivos en tiempo real"
       ],
-      benefits: "Mejora del 50% en la precisión de pronósticos y decisiones más informadas."
+      benefits: "Mejora del 50% en la precisión de pronósticos y decisiones más informadas.",
+      ctaText: "Predecir mi futuro empresarial",
+      link: "/servicios/analisis-predictivo"
     },
     {
       icon: <Cpu size={48} />,
@@ -70,7 +78,9 @@ const Services = () => {
         "Análisis de sentimientos",
         "Aprendizaje continuo"
       ],
-      benefits: "Reducción del 80% en tiempo de respuesta y disponibilidad 24/7."
+      benefits: "Reducción del 80% en tiempo de respuesta y disponibilidad 24/7.",
+      ctaText: "Crear mi asistente virtual",
+      link: "/servicios/chatbots-asistentes"
     },
     {
       icon: <GraduationCap size={48} />,
@@ -83,7 +93,9 @@ const Services = () => {
         "Mentoring personalizado",
         "Acceso a plataforma de aprendizaje online"
       ],
-      benefits: "Equipos formados con 95% de tasa de finalización y certificación garantizada."
+      benefits: "Equipos formados con 95% de tasa de finalización y certificación garantizada.",
+      ctaText: "Formar mi equipo en IA",
+      link: "/servicios/formacion-capacitacion"
     }
   ];
 
@@ -115,9 +127,11 @@ const Services = () => {
                       <div className={`p-3 ${index % 2 === 0 ? 'bg-blue-100 text-blue-600' : 'bg-green-100 text-green-600'} rounded-full`}>
                         {service.icon}
                       </div>
-                      <CardTitle className={`text-2xl font-bold ${index % 2 === 0 ? 'text-blue-900' : 'text-green-900'}`}>
-                        {service.title}
-                      </CardTitle>
+                      <Link to={service.link}>
+                        <CardTitle className={`text-2xl font-bold ${index % 2 === 0 ? 'text-blue-900 hover:text-blue-700' : 'text-green-900 hover:text-green-700'} transition-colors cursor-pointer`}>
+                          {service.title}
+                        </CardTitle>
+                      </Link>
                     </div>
                     <CardDescription className="text-lg text-gray-700 mb-6">
                       {service.description}
@@ -130,7 +144,7 @@ const Services = () => {
                     </div>
                     <Link to="/contacto">
                       <Button className={`${index % 2 === 0 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-green-600 hover:bg-green-700'} text-white`}>
-                        Solicitar información
+                        {service.ctaText}
                       </Button>
                     </Link>
                   </CardHeader>

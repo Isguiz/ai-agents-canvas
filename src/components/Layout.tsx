@@ -1,8 +1,13 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,13 +15,25 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const navItems = [
     { path: '/', label: 'Inicio' },
-    { path: '/servicios', label: 'Servicios' },
     { path: '/nosotros', label: 'Nosotros' },
     { path: '/contacto', label: 'Contacto' }
   ];
 
+  const serviceItems = [
+    { path: '/servicios/consultoria-estrategica', label: 'Consultoría estratégica en IA' },
+    { path: '/servicios/automatizacion-procesos', label: 'Automatización de procesos' },
+    { path: '/servicios/machine-learning', label: 'Machine learning' },
+    { path: '/servicios/analisis-predictivo', label: 'Análisis predictivo' },
+    { path: '/servicios/chatbots-asistentes', label: 'Chatbots y asistentes' },
+    { path: '/servicios/formacion-capacitacion', label: 'Formación y capacitación' }
+  ];
+
   const isActiveRoute = (path: string) => {
     return location.pathname === path;
+  };
+
+  const isServicesActive = () => {
+    return location.pathname === '/servicios' || location.pathname.startsWith('/servicios/');
   };
 
   return (
@@ -32,7 +49,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden md:flex space-x-8 items-center">
               {navItems.map(item => (
                 <Link
                   key={item.path}
@@ -46,6 +63,37 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   {item.label}
                 </Link>
               ))}
+              
+              {/* Services Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className={`flex items-center text-lg font-medium transition-colors duration-300 ${
+                      isServicesActive()
+                        ? 'text-blue-600 border-b-2 border-blue-600'
+                        : 'text-gray-700 hover:text-blue-600'
+                    }`}
+                  >
+                    Servicios
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-64">
+                  <DropdownMenuItem asChild>
+                    <Link to="/servicios" className="w-full">
+                      Ver todos los servicios
+                    </Link>
+                  </DropdownMenuItem>
+                  <div className="border-t my-1"></div>
+                  {serviceItems.map(service => (
+                    <DropdownMenuItem key={service.path} asChild>
+                      <Link to={service.path} className="w-full">
+                        {service.label}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
 
             {/* Mobile menu button */}
@@ -77,6 +125,29 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     {item.label}
                   </Link>
                 ))}
+                <Link
+                  to="/servicios"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-lg font-medium transition-colors duration-300 ${
+                    isServicesActive()
+                      ? 'text-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Servicios
+                </Link>
+                <div className="pl-4 space-y-2">
+                  {serviceItems.map(service => (
+                    <Link
+                      key={service.path}
+                      to={service.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      {service.label}
+                    </Link>
+                  ))}
+                </div>
               </nav>
             </div>
           )}
@@ -108,6 +179,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link to="/servicios" className="text-blue-200 hover:text-white transition-colors">
+                    Servicios
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
