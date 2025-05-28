@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Brain, Zap, Target, BarChart3, Cpu, Users, CheckCircle } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
@@ -12,42 +11,42 @@ const Home = () => {
       title: "Consultoría en IA",
       description: "Estrategias personalizadas para implementar inteligencia artificial en tu negocio.",
       keyPoints: ["Análisis completo de necesidades", "Roadmap de implementación", "ROI garantizado"],
-      link: "/servicios"
+      link: "/servicios/consultoria-estrategica"
     },
     {
       icon: <Zap size={32} />,
       title: "Automatización de procesos",
       description: "Optimiza tus operaciones con soluciones de automatización inteligente.",
       keyPoints: ["Reducción de costos operativos", "Mejora en la eficiencia", "Integración sin interrupciones"],
-      link: "/servicios"
+      link: "/servicios/automatizacion-procesos"
     },
     {
       icon: <Target size={32} />,
       title: "Machine learning personalizado",
       description: "Modelos de ML adaptados específicamente a tus datos y objetivos.",
       keyPoints: ["Algoritmos a medida", "Entrenamiento con tus datos", "Métricas de rendimiento claras"],
-      link: "/servicios"
+      link: "/servicios/machine-learning"
     },
     {
       icon: <BarChart3 size={32} />,
       title: "Análisis predictivo",
       description: "Anticipa tendencias y toma decisiones basadas en datos inteligentes.",
       keyPoints: ["Predicciones precisas", "Dashboards interactivos", "Alertas automáticas"],
-      link: "/servicios"
+      link: "/servicios/analisis-predictivo"
     },
     {
       icon: <Cpu size={32} />,
       title: "Desarrollo de chatbots",
       description: "Asistentes virtuales inteligentes para mejorar la experiencia del cliente.",
       keyPoints: ["Disponibilidad 24/7", "Integración multicanal", "Aprendizaje continuo"],
-      link: "/servicios"
+      link: "/servicios/chatbots-asistentes"
     },
     {
       icon: <Users size={32} />,
       title: "Capacitación en IA",
       description: "Forma a tu equipo en las últimas tecnologías de inteligencia artificial.",
       keyPoints: ["Programas personalizados", "Instructores expertos", "Certificaciones reconocidas"],
-      link: "/servicios"
+      link: "/servicios/formacion-capacitacion"
     }
   ];
 
