@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -50,16 +49,11 @@ const AutomatizacionProcesos = () => {
               <p className="text-xl text-green-100 mb-8">
                 Transformamos procesos manuales en flujos automatizados utilizando RPA e IA para maximizar la eficiencia.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contacto">
-                  <Button size="lg" className="bg-white text-green-900 hover:bg-green-50">
-                    Analizar mis procesos
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-green-900 bg-transparent">
-                  Ver demo en vivo
+              <Link to="/contacto">
+                <Button size="lg" className="bg-white text-green-900 hover:bg-green-50">
+                  Analizar mis procesos
                 </Button>
-              </div>
+              </Link>
             </div>
             <div className="relative">
               <img 

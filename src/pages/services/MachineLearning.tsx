@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -50,16 +49,11 @@ const MachineLearning = () => {
               <p className="text-xl text-purple-100 mb-8">
                 Creamos modelos de ML personalizados que resuelven problemas específicos de tu negocio con precisión excepcional.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contacto">
-                  <Button size="lg" className="bg-white text-purple-900 hover:bg-purple-50">
-                    Desarrollar mi modelo
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-900 bg-transparent">
-                  Ver casos de éxito
+              <Link to="/contacto">
+                <Button size="lg" className="bg-white text-purple-900 hover:bg-purple-50">
+                  Desarrollar mi modelo
                 </Button>
-              </div>
+              </Link>
             </div>
             <div className="relative">
               <img 

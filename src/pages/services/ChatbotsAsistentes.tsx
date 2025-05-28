@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -50,16 +49,11 @@ const ChatbotsAsistentes = () => {
               <p className="text-xl text-teal-100 mb-8">
                 Desarrollamos chatbots inteligentes que mejoran la experiencia del cliente y reducen costos de soporte.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contacto">
-                  <Button size="lg" className="bg-white text-teal-900 hover:bg-teal-50">
-                    Crear mi chatbot
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-teal-900 bg-transparent">
-                  Probar chatbot demo
+              <Link to="/contacto">
+                <Button size="lg" className="bg-white text-teal-900 hover:bg-teal-50">
+                  Crear mi chatbot
                 </Button>
-              </div>
+              </Link>
             </div>
             <div className="relative">
               <img 

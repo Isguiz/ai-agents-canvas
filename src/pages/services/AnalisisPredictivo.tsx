@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -50,16 +49,11 @@ const AnalisisPredictivo = () => {
               <p className="text-xl text-orange-100 mb-8">
                 Utilizamos algoritmos de última generación para predecir tendencias y comportamientos futuros.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contacto">
-                  <Button size="lg" className="bg-white text-orange-900 hover:bg-orange-50">
-                    Predecir mi futuro
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-900 bg-transparent">
-                  Ver predicciones demo
+              <Link to="/contacto">
+                <Button size="lg" className="bg-white text-orange-900 hover:bg-orange-50">
+                  Predecir mi futuro
                 </Button>
-              </div>
+              </Link>
             </div>
             <div className="relative">
               <img 

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -50,16 +49,11 @@ const FormacionCapacitacion = () => {
               <p className="text-xl text-indigo-100 mb-8">
                 Programas de formación especializados para equipos y profesionales que quieren dominar las tecnologías de IA.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contacto">
-                  <Button size="lg" className="bg-white text-indigo-900 hover:bg-indigo-50">
-                    Formar mi equipo
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 bg-transparent">
-                  Ver programa completo
+              <Link to="/contacto">
+                <Button size="lg" className="bg-white text-indigo-900 hover:bg-indigo-50">
+                  Formar mi equipo
                 </Button>
-              </div>
+              </Link>
             </div>
             <div className="relative">
               <img 

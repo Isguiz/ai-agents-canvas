@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -50,16 +49,11 @@ const ConsultoriaEstrategica = () => {
               <p className="text-xl text-blue-100 mb-8">
                 Desarrollamos estrategias personalizadas para la implementación exitosa de inteligencia artificial en tu organización.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contacto">
-                  <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50">
-                    Solicitar consulta gratuita
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 bg-transparent">
-                  Descargar caso de éxito
+              <Link to="/contacto">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50">
+                  Solicitar consulta gratuita
                 </Button>
-              </div>
+              </Link>
             </div>
             <div className="relative">
               <img 
