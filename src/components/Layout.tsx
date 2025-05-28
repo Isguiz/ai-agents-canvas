@@ -50,50 +50,68 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8 items-center">
-              {navItems.map(item => (
+              <Link
+                to="/"
+                className={`text-lg font-medium transition-colors duration-300 ${
+                  isActiveRoute('/')
+                    ? 'text-blue-600 border-b-2 border-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
+              >
+                Inicio
+              </Link>
+              
+              {/* Services Dropdown with Hover */}
+              <div className="relative group">
                 <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`text-lg font-medium transition-colors duration-300 ${
-                    isActiveRoute(item.path)
+                  to="/servicios"
+                  className={`flex items-center text-lg font-medium transition-colors duration-300 ${
+                    isServicesActive()
                       ? 'text-blue-600 border-b-2 border-blue-600'
                       : 'text-gray-700 hover:text-blue-600'
                   }`}
                 >
-                  {item.label}
+                  Servicios
+                  <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                 </Link>
-              ))}
-              
-              {/* Services Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <button
-                    className={`flex items-center text-lg font-medium transition-colors duration-300 ${
-                      isServicesActive()
-                        ? 'text-blue-600 border-b-2 border-blue-600'
-                        : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
-                    Servicios
-                    <ChevronDown className="ml-1 h-4 w-4" />
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-64">
-                  <DropdownMenuItem asChild>
-                    <Link to="/servicios" className="w-full">
-                      Ver todos los servicios
-                    </Link>
-                  </DropdownMenuItem>
-                  <div className="border-t my-1"></div>
-                  {serviceItems.map(service => (
-                    <DropdownMenuItem key={service.path} asChild>
-                      <Link to={service.path} className="w-full">
+                
+                {/* Hover Dropdown */}
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-3">
+                    {serviceItems.map(service => (
+                      <Link
+                        key={service.path}
+                        to={service.path}
+                        className="block px-6 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150"
+                      >
                         {service.label}
                       </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <Link
+                to="/nosotros"
+                className={`text-lg font-medium transition-colors duration-300 ${
+                  isActiveRoute('/nosotros')
+                    ? 'text-blue-600 border-b-2 border-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
+              >
+                Nosotros
+              </Link>
+
+              <Link
+                to="/contacto"
+                className={`text-lg font-medium transition-colors duration-300 ${
+                  isActiveRoute('/contacto')
+                    ? 'text-blue-600 border-b-2 border-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
+              >
+                Contacto
+              </Link>
             </nav>
 
             {/* Mobile menu button */}
@@ -111,20 +129,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {isMenuOpen && (
             <div className="md:hidden pb-6">
               <nav className="flex flex-col space-y-4">
-                {navItems.map(item => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`text-lg font-medium transition-colors duration-300 ${
-                      isActiveRoute(item.path)
-                        ? 'text-blue-600'
-                        : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                <Link
+                  to="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-lg font-medium transition-colors duration-300 ${
+                    isActiveRoute('/')
+                      ? 'text-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Inicio
+                </Link>
                 <Link
                   to="/servicios"
                   onClick={() => setIsMenuOpen(false)}
@@ -148,6 +163,28 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     </Link>
                   ))}
                 </div>
+                <Link
+                  to="/nosotros"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-lg font-medium transition-colors duration-300 ${
+                    isActiveRoute('/nosotros')
+                      ? 'text-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Nosotros
+                </Link>
+                <Link
+                  to="/contacto"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-lg font-medium transition-colors duration-300 ${
+                    isActiveRoute('/contacto')
+                      ? 'text-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Contacto
+                </Link>
               </nav>
             </div>
           )}
@@ -172,16 +209,24 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Enlaces rápidos</h4>
               <ul className="space-y-2">
-                {navItems.map(item => (
-                  <li key={item.path}>
-                    <Link to={item.path} className="text-blue-200 hover:text-white transition-colors">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link to="/" className="text-blue-200 hover:text-white transition-colors">
+                    Inicio
+                  </Link>
+                </li>
                 <li>
                   <Link to="/servicios" className="text-blue-200 hover:text-white transition-colors">
                     Servicios
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/nosotros" className="text-blue-200 hover:text-white transition-colors">
+                    Nosotros
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contacto" className="text-blue-200 hover:text-white transition-colors">
+                    Contacto
                   </Link>
                 </li>
               </ul>
